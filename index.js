@@ -114,17 +114,18 @@ swg = (value) => {
   }
 };
 
-var buttonscolor = document.querySelectorAll("button");
+var buttonscolor = [];
 
 function buttonColorChanger(data) {
   // store all buttons in variable.
-
-  // Todo :handle reset function
   let copybutton = document.querySelectorAll("button");
-  console.log(copybutton);
-  console.log("global button");
-  console.log(buttonscolor);
-
+   
+  if(buttonscolor.length==0){
+  for (let i = 0; i < copybutton.length; i++)
+  {
+    buttonscolor.push(copybutton[i].classList[1]);
+  }
+}
   if (data.value === "Yellow") {
     // change all buttons color to yellow.
     for (btn of copybutton) {
@@ -171,14 +172,13 @@ function buttonColorChanger(data) {
       btn.classList.replace(btn.classList[1], colorlist[randomIndex]);
     }
   }
-
-  //Todo : Reset not working !
-  if (data.value === "Reset") {
-    // change all buttons color to reset.
+  if(data.value === "Reset"){
+    //console.log("Reset option",buttonscolor);
+    //change all buttons color to reset.
     for (let i = 0; i < copybutton.length; i++) {
       copybutton[i].classList.replace(
         copybutton[i].classList[1],
-        buttonscolor[i].classList[1]
+        buttonscolor[i]
       );
     }
   }
@@ -315,7 +315,7 @@ function Deal() {
 }
 
 
-function showScore(activePlayer,buttonID) {
+function showScore(activePlayer) {
 
    if(blackJack[activePlayer]["score"]>21)
        {
@@ -427,9 +427,8 @@ if(value=='player1') {
 
 var comGuess=Math.floor(Math.random()*100)+1; ///1-100
 var guesses=[];
-function check(){
-console.log("clicked check")
-  let humanGuess=document.querySelector('input').value;
+function Guesscheck(){
+  let humanGuess=document.querySelector('#GuessNumber').value;
 
    //console.log(humanGuess,comGuess)
 
@@ -437,13 +436,13 @@ console.log("clicked check")
      
     if(humanGuess<comGuess){
      document.querySelector('#popup-result').innerHTML=`<div class="alert alert-warning" role="alert">
-     <h4>  Please enter a higher number. </h4>
+     <h4>  Please Enter a Higher Number. </h4>
    </div>`  
 
     }
   else if(humanGuess>comGuess){
     document.querySelector('#popup-result').innerHTML=`<div class="alert alert-danger" role="alert">
-    <h4> Please enter a lower number.</h4>
+    <h4> Please Enter a Lower Number.</h4>
    </div>`  
 
   }
@@ -471,17 +470,20 @@ function displayGuess(){
 
   html +=`</ul>`;
 
+  // console.log(guesses.length);
+
   document.querySelector('.history').innerHTML=html;
+  document.querySelector('.guessAttempt').innerHTML=`<h5>Your Guessed Count : ${guesses.length}</h5>`
 }
 
-document.querySelector("#guessreset").addEventListener('click',reset);
-
-function reset(){
-  console.log("clicked reset");
+function Guessreset(){
+  //console.log("clicked reset");
 comGuess=0;
 comGuess=Math.floor(Math.random()*100)+1; ///1-100
  guesses=[];
  document.querySelector('.history').innerHTML="";
  document.querySelector('#popup-result').innerHTML="";
+ document.querySelector('.guessAttempt').innerHTML="";
+ document.querySelector('#GuessNumber').value='';
 
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./stylesheet/style.css">
-    <title>Challenge</title>
+    <title>JS Steroids</title>
 </head>
 <body>
 
@@ -167,22 +167,22 @@
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Guess The Number</a>
     </nav>
-<h2 style="color:#311F0F;font-size:3rem;margin-bottom:24px;">1.2.3.4.5..</h2>
+<h2 style="color:#311F0F;font-size:3rem;margin-bottom:24px;">1.2.3.4.5.</h2>
 
 <div class="form-group">
-    <input class="form-control form-control-lg" id="GuessNumber" type="number" placeholder="What's your Guessess from 1-100 ?">
+    <input class="form-control form-control-lg" id="GuessNumber" type="number" placeholder="What's your Guess From 1-100 ?"  onfocus="this.value=''">
 
 <div id="popup-result"></div>
 </div>
 <div class="btn-class">
-    <button type="button" class="btn btn-info btn-lg mr-2" id="guesscheck"onclick="check()">Check</button>
-    <button type="button" class="btn btn-danger btn-lg " id="guessreset">Reset</button>
+    <button type="button" class="btn btn-info btn-lg mr-2" id="guesscheck" onclick="Guesscheck()" >Check</button>
+    <button type="button" class="btn btn-danger btn-lg " id="guessreset" onclick="Guessreset()">Restart</button>
     
 
 </div>     
 
+<div class="guessAttempt"></div>
 <div class="history">
-
 </div>
 
 </div>
