@@ -219,7 +219,7 @@ let blackJack = {
   'win':0,
   'lose':0,
   'Draw':0,
-  'IsStand':false,
+  'isStand':false,
   'turnOver':false,
 };
 
@@ -231,10 +231,10 @@ document.getElementById("blackJack-hit").addEventListener("click", Hit); // choo
 
 document.getElementById('blackJack-Stand').addEventListener('click',Stand); // disable hit buttton
 
-document.getElementById("blackJack-Deal").addEventListener("click", Deal); //play bot and choose random card;
-
+document.getElementById("blackJack-Deal").addEventListener("click", Deal); //play bot and choose random card;  
+ document.getElementById(blackJack['Deal']).disabled=true;    
 function Hit() {
-  if(blackJack['IsStand']==false)
+  if(blackJack['isStand']==false)
   {
   let randCard = randomCard();
   let activePlayer = "player1";
@@ -310,6 +310,9 @@ function Deal() {
   document.querySelector('#BlackJack-result').style.color ='black';
   blackJack['IsStand']=false;
   blackJack['turnOver']=false;
+  document.getElementById(blackJack['Hit']).disabled=false; 
+  document.getElementById(blackJack['Stand']).disabled=false; 
+  document.getElementById(blackJack['Deal']).disabled=true; 
 }
 
 }
@@ -321,7 +324,7 @@ function showScore(activePlayer) {
        {
         document.querySelector(blackJack[activePlayer]["scoreSpan"]).textContent ='BUST!!';
         document.querySelector(blackJack[activePlayer]["scoreSpan"]).style.color ='red';
-        //document.getElementById(blackJack[buttonID]).disabled=true;    
+       
         // alert('You busted'); 
        }
 else
@@ -337,6 +340,7 @@ function sleep(ms){
 
 async function Stand(){
   blackJack['IsStand']=true;
+  document.getElementById(blackJack['Hit']).disabled=true; 
   while(blackJack['player2']['score']<16 && blackJack['IsStand']==true){
   let randCard = randomCard();
   let activePlayer = "player2";
@@ -347,9 +351,11 @@ async function Stand(){
   }
   blackJack['turnOver']=true;
   showResult(winner()) 
+  document.getElementById(blackJack['Deal']).disabled=false; 
+  document.getElementById(blackJack['Stand']).disabled=true; 
   
-
 }
+
 
 
 //calculate winner.
@@ -404,7 +410,6 @@ if(value=='player1') {
   blackJack['lose']++;
  }
  else{
- 
   msg='Match draw !';
   msgCol='yellow';
   blackJack['Draw']++;

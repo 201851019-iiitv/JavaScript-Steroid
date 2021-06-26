@@ -197,8 +197,7 @@ select,button {
 }
 
 .form-group input{
-
- width:45%;
+width: 340px;
  margin:8px;
  
 border-radius: 7px;
