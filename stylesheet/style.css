@@ -1,0 +1,234 @@
+.container1 {
+  border: solid 2px;
+  text-align: center;
+  margin: 8px auto;
+  width: 75%;
+  border-bottom: none;
+}
+
+.container2 {
+  display: flex;
+  border: solid 1px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* position: relative; */
+}
+
+.flex-container1 {
+  padding: 8px;
+}
+
+.flex-box1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-bottom: 2px solid black;
+}
+
+h3 {
+  border-bottom: 2px solid;
+}
+
+h2 {
+  color: #1289eb;
+}
+
+#gifImage img {
+  height: 200px;
+  padding: 16px;
+  width: 200px;
+}
+
+.swg img {
+  width: 25%;
+  margin: 16px;
+  padding: 16px;
+}
+
+.swg img:hover {
+  box-shadow: 0 0 5px 15px rgba(37, 50, 233, 0.5);
+}
+
+.status1 {
+  width: 25%;
+  display: inline-block;
+  color: rgb(145, 145, 21);
+}
+.status2 {
+  width: 25%;
+  display: inline-block;
+  color: rgb(26, 235, 26);
+}
+.status3 {
+  width: 25%;
+  display: inline-block;
+  color: rgb(214, 34, 34);
+}
+#resultswg{
+  border-bottom: 2px solid black;
+}
+
+#resultswg h3 {
+  display: inline-block;
+  padding: 16px;
+  font-size: 2.5rem;
+  border: none;
+}
+#resultswg img {
+  width: 25%;
+  margin: 16px;
+  padding: 16px;
+  white-space: nowrap;
+
+}
+
+.first:hover {
+  box-shadow: 0 0 5px 15px rgba(29, 243, 65, 0.5);
+}
+
+.second:hover {
+  box-shadow: 0 0 5px 15px rgba(173, 4, 18, 0.5);
+}
+select,button {
+  border-radius: 8px;
+}
+
+.container3{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-bottom: 2px solid black;
+
+}
+.container6{
+    background-image: url("https://media.istockphoto.com/photos/green-poker-table-background-picture-id643199720?k=6&m=643199720&s=170667a&w=0&h=a6gzxiCk7LHz-l1oDNsXfCcUQXkuIfdw9AV4KFroYqg=");  
+    border: 1px solid;
+}
+
+.flex-box2 {
+ 
+  height:450px;
+  width: 100%;
+  color:#ffffff;
+  display: flex;
+ justify-content: space-around;
+
+}
+
+.flex-box2 h3{
+    border: none;
+
+}
+.btn-box{
+    margin:8px;
+    padding: 16px;
+    border:2px solid rgb(10, 10, 10);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.box1{
+    border:2px solid black;
+    padding:8px;
+}
+.player1 .flex-box1{
+  border: none;
+}
+.player2 .flex-box1{
+  border: none;
+}
+.player1{
+   border:2px solid rgb(10, 10, 10);
+  flex: 1;
+  margin-top:16px;
+  margin-left: 8px;
+
+}
+
+.player2{
+    flex: 1;
+    border:2px solid rgb(13, 14, 13);
+   margin-top:16px;
+   margin-right: 8px;
+}
+
+.table{
+    margin:8px;
+    width:20%;
+    border:1px solid black;
+}
+
+.table th,.table td,.table tr{
+    padding:3px;
+    border:2px solid rgb(10, 10, 10);
+    
+}
+
+.card-img1 img{
+  height:139px !important;
+  width:100px !important;
+  padding: 8px;
+  max-height: 450px;
+} 
+
+
+
+
+.card-img2 img{
+  height:139px !important;
+  width:100px !important;
+  padding: 8px;
+  max-height: 450px;
+}
+
+.ply1 h3{
+  display:block;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  flex:1
+}
+
+.form-group input{
+
+ width:50%;
+ margin:8px;
+ 
+border-radius: 7px;
+
+}
+
+#guesscheck ,#guessreset{
+  margin:8px;
+}
+
+#popup-result{
+  width:50%;
+ margin: 8px;
+}
+
+.history{
+  margin-top:24px;
+  border-bottom:2px solid black;
+}
+.history ul{
+  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom:24px;
+
+}
+
+.history li{
+  width:50%;
+}
+
